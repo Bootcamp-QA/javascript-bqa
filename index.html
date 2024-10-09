@@ -60,6 +60,7 @@
     <!-- Sección: Hola Mundo en JavaScript -->
     <div class="box">
         <h2>Configuración Inicial</h2>
+        <a href="https://www.w3schools.com/js/js_whereto.asp">Incluir Javascript en HTML</a>
         <p>Para comenzar a utilizar JavaScript, crea un archivo llamado <code>script.js</code> y luego inclúyelo en tu
             documento HTML utilizando la etiqueta <code>&lt;script&gt;</code>. Es recomendable colocar el enlace al
             archivo JavaScript justo antes del cierre de la etiqueta <code>&lt;/body&gt;</code> para asegurar que el
@@ -84,6 +85,7 @@
     <!-- Sección: Variables -->
     <div class="box">
         <h2>Variables</h2>
+         <a href="https://www.w3schools.com/js/js_variables.asp">Variables</a>
         <p>Las variables son contenedores para almacenar datos. Pueden definirse con <code>let</code>, o
             <code>const</code> si es un valor que no va a cambiar.
         </p>
@@ -130,6 +132,7 @@
     <!-- Sección: Operaciones básicas -->
     <div class="box">
         <h2>Operaciones Básicas</h2>
+        <a href="https://www.w3schools.com/js/js_operators.asp">Operaciones</a>
         <p>JavaScript permite realizar operaciones matemáticas como suma, resta, multiplicación y división.</p>
         <pre><code>let suma = 5 + 3;
 let resta = 5 - 3;
@@ -156,7 +159,8 @@ let division = 6 / 3;</code></pre>
 
     <!-- Sección: Cadenas Básicas -->
     <div class="box">
-        <h2>Cadenas Básicas</h2>
+        <h2>Cadenas</h2>
+        <a href="https://www.w3schools.com/js/js_string_methods.asp">Cadenas</a>
         <p>Las cadenas (strings) son textos. Puedes concatenarlas con el operador <code>+</code>.</p>
         <pre><code>let saludo = "Hola " + "mundo";
 // Obtener longitud de la palabra
@@ -204,6 +208,8 @@ let minusculas = saludo.toLowerCase();
     <!-- Sección: Funciones sin parámetros y evento onclick -->
     <div class="box">
         <h2>Funciones sin Parámetros y Evento onclick</h2>
+          <a href="https://www.w3schools.com/js/js_functions.asp">Funciones</a>
+          <a href="https://www.w3schools.com/js/js_events.asp">Eventos</a>
         <p>Las funciones son bloques de código que se ejecutan cuando se les llama. Puedes usar eventos como
             <code>onclick</code> para ejecutarlas.
         </p>
@@ -228,6 +234,7 @@ let minusculas = saludo.toLowerCase();
     <!-- Sección: DOM Modificar Texto de un Elemento -->
     <div class="box">
         <h2>DOM Modificar Texto de un Elemento</h2>
+        <a href="https://www.w3schools.com/js/js_htmldom_document.asp">javascript Modificar Elementos del DOM</a>
         <p>El DOM (Document Object Model) permite acceder y modificar el contenido de los elementos HTML. Puedes cambiar
             el texto de un elemento utilizando la propiedad <code>textContent</code>.</p>
 
@@ -260,6 +267,7 @@ function modificarTexto() {
     <!-- Sección: DOM modificar estilo de un elemento -->
     <div class="box">
         <h2>DOM Modificar Estilo de un Elemento</h2>
+         <a href="https://www.w3schools.com/js/js_htmldom_css.asp">javascript Modificar Estilos del DOM</a>
         <p>Puedes cambiar el estilo de un elemento mediante <code>style</code>. Ejemplo: cambiar color, ocultar o
             mostrar un elemento.</p>
         <p><strong>HTML</strong></p>
@@ -301,6 +309,8 @@ document.getElementById("miCaja").style.display = "none";
     <!-- Sección: DOM Obtener Valores de un Formulario -->
     <div class="box">
         <h2>DOM Obtener Valores de un Formulario</h2>
+        <a href="https://www.w3schools.com/jsref/dom_obj_text.asp">javascript DOM Input</a>
+         <a href="https://www.w3schools.com/jsref/dom_obj_select.asp">javascript Select Input</a>
         <p>Para obtener valores de inputs o selects, puedes usar la propiedad <code>value</code> en JavaScript. A
             continuación se muestra un ejemplo de cómo hacerlo.</p>
 
@@ -390,37 +400,11 @@ document.getElementById("miCaja").style.display = "none";
             document.getElementById("resultadoSaludo").textContent = obtenerSaludo();
         }
     </script>
-
-    <!-- Sección: Arrays -->
-    <div class="box">
-        <h2>Arrays</h2>
-        <p>Los arrays son listas de valores. Puedes agregar, eliminar y ordenar elementos en un array.</p>
-        <pre><code>let numeros = [3, 1, 2];
-            numeros.pop();    // Eliminar el último
-            numeros.push(4);  // Agregar
-
-numeros.sort();   // Ordenar
-document.getElementById("resultadoArrays").textContent = `Array: ${numeros.join(", ")}`;
-</code></pre>
-        <button onclick="ejemploArrays()">Ver ejemplo</button>
-        <p id="resultadoArrays"></p>
-    </div>
-
-    <script>
-        function ejemploArrays() {
-            let numeros = [3, 1, 2];
-            
-            numeros.pop();    // Eliminar el último elemento
-            numeros.push(4);  // Agregar elemento
-            numeros.sort();   // Ordenar el array
-            document.getElementById("resultadoArrays").textContent = `Array: ${numeros.join(", ")}`;
-        }
-    </script>
-
-
+    
     <!-- Sección: Condicionales -->
     <div class="box">
         <h2>Condicionales</h2>
+        <a href="https://www.w3schools.com/js/js_if_else.asp">Condicionales</a>
         <p>Los condicionales permiten ejecutar código en función de condiciones. Usa <code>if</code>,
             <code>else if</code>, y <code>else</code>.
         </p>
@@ -480,6 +464,34 @@ document.getElementById("resultadoArrays").textContent = `Array: ${numeros.join(
             document.getElementById("resultadoFor").innerHTML = resultado;
         }
     </script>
+
+    <!-- Sección: Arrays -->
+    <div class="box">
+        <h2>Arrays</h2>
+        <p>Los arrays son listas de valores. Puedes agregar, eliminar y ordenar elementos en un array.</p>
+        <pre><code>let numeros = [3, 1, 2];
+            numeros.pop();    // Eliminar el último
+            numeros.push(4);  // Agregar
+
+numeros.sort();   // Ordenar
+document.getElementById("resultadoArrays").textContent = `Array: ${numeros.join(", ")}`;
+</code></pre>
+        <button onclick="ejemploArrays()">Ver ejemplo</button>
+        <p id="resultadoArrays"></p>
+    </div>
+
+    <script>
+        function ejemploArrays() {
+            let numeros = [3, 1, 2];
+            
+            numeros.pop();    // Eliminar el último elemento
+            numeros.push(4);  // Agregar elemento
+            numeros.sort();   // Ordenar el array
+            document.getElementById("resultadoArrays").textContent = `Array: ${numeros.join(", ")}`;
+        }
+    </script>
+
+
 
     <!-- Sección: Objetos -->
     <div class="box">

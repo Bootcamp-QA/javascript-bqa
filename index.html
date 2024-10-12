@@ -67,7 +67,7 @@
             contenido de la página se haya cargado antes de ejecutar el script.</p>
 
         <p>Si decides incluir el script en la parte inferior de tu documento HTML, debería verse así:</p>
-     <pre><code>
+        <pre><code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -93,7 +93,7 @@
     <!-- Sección: Variables -->
     <div class="box">
         <h2>Variables</h2>
-         <a href="https://www.w3schools.com/js/js_variables.asp">Variables</a>
+        <a href="https://www.w3schools.com/js/js_variables.asp">Variables</a>
         <p>Las variables son contenedores para almacenar datos. Pueden definirse con <code>let</code>, o
             <code>const</code> si es un valor que no va a cambiar.
         </p>
@@ -216,8 +216,8 @@ let minusculas = saludo.toLowerCase();
     <!-- Sección: Funciones sin parámetros y evento onclick -->
     <div class="box">
         <h2>Funciones sin Parámetros y Evento onclick</h2>
-          <a href="https://www.w3schools.com/js/js_functions.asp">Funciones</a>
-          <a href="https://www.w3schools.com/js/js_events.asp">Eventos</a>
+        <a href="https://www.w3schools.com/js/js_functions.asp">Funciones</a>
+        <a href="https://www.w3schools.com/js/js_events.asp">Eventos</a>
         <p>Las funciones son bloques de código que se ejecutan cuando se les llama. Puedes usar eventos como
             <code>onclick</code> para ejecutarlas.
         </p>
@@ -275,7 +275,7 @@ function modificarTexto() {
     <!-- Sección: DOM modificar estilo de un elemento -->
     <div class="box">
         <h2>DOM Modificar Estilo de un Elemento</h2>
-         <a href="https://www.w3schools.com/js/js_htmldom_css.asp">javascript Modificar Estilos del DOM</a>
+        <a href="https://www.w3schools.com/js/js_htmldom_css.asp">javascript Modificar Estilos del DOM</a>
         <p>Puedes cambiar el estilo de un elemento mediante <code>style</code>. Ejemplo: cambiar color, ocultar o
             mostrar un elemento.</p>
         <p><strong>HTML</strong></p>
@@ -318,7 +318,7 @@ document.getElementById("miCaja").style.display = "none";
     <div class="box">
         <h2>DOM Obtener Valores de un Formulario</h2>
         <a href="https://www.w3schools.com/jsref/dom_obj_text.asp">javascript DOM Input</a>
-         <a href="https://www.w3schools.com/jsref/dom_obj_select.asp">javascript Select Input</a>
+        <a href="https://www.w3schools.com/jsref/dom_obj_select.asp">javascript Select Input</a>
         <p>Para obtener valores de inputs o selects, puedes usar la propiedad <code>value</code> en JavaScript. A
             continuación se muestra un ejemplo de cómo hacerlo.</p>
 
@@ -371,44 +371,6 @@ document.getElementById("miCaja").style.display = "none";
         }
     </script>
 
-
-    <!-- Sección: Funciones con Parámetros -->
-    <div class="box">
-        <h2>Funciones con Parámetros</h2>
-        <p>Las funciones pueden aceptar parámetros, es decir, valores que puedes pasarles.</p>
-        <pre><code>function sumar(a, b) {
-            document.getElementById("resultadoSumar").textContent = a + b;
-}</code></pre>
-        <button onclick="sumar(4, 7)">Suma 4 + 7</button>
-    </div>
-    <p id="resultadoSumar"></p>
-    <script>
-        function sumar(a, b) {
-            document.getElementById("resultadoSumar").textContent = a + b;
-        }
-    </script>
-
-    <!-- Sección: Funciones que Retornan un Valor -->
-    <div class="box">
-        <h2>Funciones que Retornan un Valor</h2>
-        <p>Las funciones pueden devolver valores usando <code>return</code>.</p>
-        <pre><code>function obtenerSaludo() {
-    return "¡Hola Mundo!";
-}</code></pre>
-        <button onclick="mostrarSaludo()">Mostrar Saludo</button>
-        <p id="resultadoSaludo"></p>
-    </div>
-
-    <script>
-        function obtenerSaludo() {
-            return "¡Hola Mundo!";
-        }
-
-        function mostrarSaludo() {
-            document.getElementById("resultadoSaludo").textContent = obtenerSaludo();
-        }
-    </script>
-    
     <!-- Sección: Condicionales -->
     <div class="box">
         <h2>Condicionales</h2>
@@ -451,14 +413,101 @@ document.getElementById("miCaja").style.display = "none";
         }
     </script>
 
+    <!-- Sección: Funciones con Parámetros y retorno -->
+    <div class="box">
+        <h2>Funciones con Parámetros</h2>
+        <p>Las funciones pueden aceptar parámetros, es decir, valores que puedes pasarles, y devolver resultados. Es
+            util para separar la logica del DOM</p>
+        <pre><code>function sumar(a, b) {
+                let resultado = a + b;
+                return resultado;
+    }
 
+function mostarResultado() {
+    let num1 = document.getElementById("num1").valueAsNumber;
+    let num2 = document.getElementById("num2").valueAsNumber;
+
+    let resultado = sumar(num1,num2);
+
+    document.getElementById("resultadoSumar").textContent = "El resultado es " + resultado;
+}
+</code></pre>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button onclick="mostarResultado()">Suma</button>
+    </div>
+    <p id="resultadoSumar"></p>
+    <script>
+        function mostarResultado() {
+            let num1 = document.getElementById("num1").valueAsNumber;
+            let num2 = document.getElementById("num2").valueAsNumber;
+
+            let resultado = sumar(num1, num2);
+
+            document.getElementById("resultadoSumar").textContent = "El resultado es " + resultado;
+        }
+        function sumar(a, b) {
+            return a + b;
+        }
+    </script>
+
+    <!-- Sección: Arrays -->
+    <div class="box">
+        <h2>Arrays</h2>
+        <p>Los arrays son listas de valores. Puedes agregar, eliminar y ordenar elementos en un array.</p>
+        <pre><code>
+            function ejemploArrays() {
+                let numeros = [3, 1, 2];
+                // Eliminar el último elemento y mostrar el array
+                numeros.pop();
+                document.getElementById("resultadoArrays").textContent += "Eliminar: " + numeros + " ";
+                // Agregar elemento y mostrar el array
+                numeros.push(4);
+                document.getElementById("resultadoArrays").textContent += "Agregar: " + numeros + " ";
+                // Ordenar el array y mostrarlo
+                numeros.sort();
+                document.getElementById("resultadoArrays").textContent +="Ordenar: " + numeros + " ";
+                // Obtener el elemento de la posicion que elijas, el primero es el 0
+                let primero = numeros[0];
+                let tercero = numeros[2];
+                document.getElementById("resultadoArrays").textContent += "Primero " + primero + "Tercero " + tercero;
+            }  
+        </code></pre>
+        <button onclick="ejemploArrays()">Ver ejemplo</button>
+        <p id="resultadoArrays"></p>
+    </div>
+
+    <script>
+        function ejemploArrays() {
+            let numeros = [3, 1, 2];
+            // Eliminar el último elemento y mostrar el array
+            numeros.pop();
+            document.getElementById("resultadoArrays").textContent += "Eliminar: " + numeros + " ";
+            // Agregar elemento y mostrar el array
+            numeros.push(4);
+            document.getElementById("resultadoArrays").textContent += "Agregar: " + numeros + " ";
+            // Ordenar el array y mostrarlo
+            numeros.sort();
+            document.getElementById("resultadoArrays").textContent += "Ordenar: " + numeros + " ";
+            // Obtener el elemento de la posicion que elijas, el primero es el 0
+            let primero = numeros[0];
+            let tercero = numeros[2];
+            document.getElementById("resultadoArrays").textContent += "Primero " + primero + "Tercero " + tercero;
+        } 
+    </script>
     <!-- Sección: Bucle For -->
     <div class="box">
         <h2>Bucle For</h2>
         <p>Los bucles <code>for</code> permiten repetir acciones un número específico de veces.</p>
-        <pre><code>for (let i = 0; i < 5; i++) {
-            document.getElementById("resultadoFor").textContent += `Número: ${i}<br>`;
-}</code></pre>
+        <pre><code>
+            function ejemploFor() {
+                let resultado = "";
+                for (let i = 0; i < 5; i++) {
+                    resultado += "Número: " + i;
+                }
+                document.getElementById("resultadoFor").innerHTML = resultado;
+            }
+        </code></pre>
         <button onclick="ejemploFor()">Ver ejemplo</button>
         <p id="resultadoFor"></p>
     </div>
@@ -472,33 +521,6 @@ document.getElementById("miCaja").style.display = "none";
             document.getElementById("resultadoFor").innerHTML = resultado;
         }
     </script>
-
-    <!-- Sección: Arrays -->
-    <div class="box">
-        <h2>Arrays</h2>
-        <p>Los arrays son listas de valores. Puedes agregar, eliminar y ordenar elementos en un array.</p>
-        <pre><code>let numeros = [3, 1, 2];
-            numeros.pop();    // Eliminar el último
-            numeros.push(4);  // Agregar
-
-numeros.sort();   // Ordenar
-document.getElementById("resultadoArrays").textContent = `Array: ${numeros.join(", ")}`;
-</code></pre>
-        <button onclick="ejemploArrays()">Ver ejemplo</button>
-        <p id="resultadoArrays"></p>
-    </div>
-
-    <script>
-        function ejemploArrays() {
-            let numeros = [3, 1, 2];
-            
-            numeros.pop();    // Eliminar el último elemento
-            numeros.push(4);  // Agregar elemento
-            numeros.sort();   // Ordenar el array
-            document.getElementById("resultadoArrays").textContent = `Array: ${numeros.join(", ")}`;
-        }
-    </script>
-
 
 
     <!-- Sección: Objetos -->

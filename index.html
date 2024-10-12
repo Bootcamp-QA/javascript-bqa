@@ -455,6 +455,7 @@ function mostarResultado() {
     <div class="box">
         <h2>Arrays</h2>
         <p>Los arrays son listas de valores. Puedes agregar, eliminar y ordenar elementos en un array.</p>
+        <a href="https://www.w3schools.com/js/js_array_methods.asp">Arrays</a>
         <pre><code>
             function ejemploArrays() {
                 let numeros = [3, 1, 2];
@@ -464,6 +465,9 @@ function mostarResultado() {
                 // Agregar elemento y mostrar el array
                 numeros.push(4);
                 document.getElementById("resultadoArrays").textContent += "Agregar: " + numeros + " ";
+                //Obtener la longitud del array
+                let longitud = numeros.lenght;
+                document.getElementById("resultadoArrays").textContent += "Longitud: " + longitud;
                 // Ordenar el array y mostrarlo
                 numeros.sort();
                 document.getElementById("resultadoArrays").textContent +="Ordenar: " + numeros + " ";
@@ -471,6 +475,7 @@ function mostarResultado() {
                 let primero = numeros[0];
                 let tercero = numeros[2];
                 document.getElementById("resultadoArrays").textContent += "Primero " + primero + "Tercero " + tercero;
+            
             }  
         </code></pre>
         <button onclick="ejemploArrays()">Ver ejemplo</button>
@@ -486,6 +491,8 @@ function mostarResultado() {
             // Agregar elemento y mostrar el array
             numeros.push(4);
             document.getElementById("resultadoArrays").textContent += "Agregar: " + numeros + " ";
+            let longitud = numeros.lenght;
+            document.getElementById("resultadoArrays").textContent += "Longitud: " + longitud;
             // Ordenar el array y mostrarlo
             numeros.sort();
             document.getElementById("resultadoArrays").textContent += "Ordenar: " + numeros + " ";
@@ -499,13 +506,23 @@ function mostarResultado() {
     <div class="box">
         <h2>Bucle For</h2>
         <p>Los bucles <code>for</code> permiten repetir acciones un número específico de veces.</p>
+        <a href="https://www.w3schools.com/js/js_loop_for.asp">Bucle For</a>
         <pre><code>
             function ejemploFor() {
                 let resultado = "";
                 for (let i = 0; i < 5; i++) {
                     resultado += "Número: " + i;
                 }
-                document.getElementById("resultadoFor").innerHTML = resultado;
+                document.getElementById("resultadoFor").textContent += "Numeros " + resultado;
+            }
+
+            function ejemploForArray() {
+                let lista = ["Ana", "Maria", "Juan"];
+                let resultado = "";
+                for (let i = 0; i < lista.lenght; i++) {
+                    resultado += "Nombre: " + lista[i];
+                }
+                document.getElementById("resultadoFor").textContent += " Lista " + resultado;
             }
         </code></pre>
         <button onclick="ejemploFor()">Ver ejemplo</button>
@@ -518,7 +535,14 @@ function mostarResultado() {
             for (let i = 0; i < 5; i++) {
                 resultado += `Número: ${i}<br>`;
             }
-            document.getElementById("resultadoFor").innerHTML = resultado;
+            document.getElementById("resultadoFor").innerHTML = "Numeros " + resultado;
+
+            let lista = ["Ana", "Maria", "Juan"];
+               
+                for (let i = 0; i < lista.lenght; i++) {
+                    resultado += "Nombre: " + lista[i];
+                }
+                document.getElementById("resultadoFor").textContent += " Lista " + resultado;
         }
     </script>
 
@@ -527,18 +551,29 @@ function mostarResultado() {
     <div class="box">
         <h2>Objetos</h2>
         <p>Los objetos son colecciones de pares clave-valor. Puedes modificarlos y acceder a sus valores.</p>
-        <pre><code>let persona = {nombre: "Ana", edad: 30};
-persona.edad = 31;
-document.getElementById("resultadoObjetos").textContent = `Nombre: ${persona.nombre}, Edad: ${persona.edad}`;
-</code></pre>
+        <a href="https://www.w3schools.com/js/js_objects.asp">Objetos</a>
+        <pre><code>
+            function ejemploObjetos(){
+                //Crear Nuevo Objeto
+                let persona = { nombre: "Ana", edad: 30 };
+                // Modificar valor del objeto
+                persona.edad = 31;  
+                //Mostrar datos del objeto
+                document.getElementById("resultadoObjetos").textContent = "Nombre: " +{persona.nombre+ ", Edad: " + persona.edad;
+            }   
+        
+        </code></pre>
         <button onclick="ejemploObjetos()">Ver ejemplo</button>
         <p id="resultadoObjetos"></p>
     </div>
 
     <script>
         function ejemploObjetos() {
+            //Crear Nuevo Objeto
             let persona = { nombre: "Ana", edad: 30 };
-            persona.edad = 31;  // Modificar valor del objeto
+            // Modificar valor del objeto
+            persona.edad = 31;
+            //Mostrar datos del objeto
             document.getElementById("resultadoObjetos").textContent = `Nombre: ${persona.nombre}, Edad: ${persona.edad}`;
         }
     </script>
@@ -546,24 +581,88 @@ document.getElementById("resultadoObjetos").textContent = `Nombre: ${persona.nom
     <!-- Sección: Array de Objetos -->
     <div class="box">
         <h2>Array de Objetos</h2>
-        <p>Un array puede contener objetos. Puedes agregar y eliminar objetos de un array.</p>
+        <p>Un array puede contener objetos. Puedes agregar objetos y recorrerlos de forma similar a cualquier array.
+            Puedes tambien ordenarlos por un campo de texto o de numero del objeto</p>
         <pre><code>
-
-let personas = [{nombre: "Ana", edad: 30}];
-personas.push({nombre: "Juan", edad: 25});
-
-document.getElementById("resultadoArrayObjetos").textContent = `Nombre: ${personas[0].nombre}, Edad: ${personas[0].edad}`;
-
-</code></pre>
+            function ejemploArrayObjetos() {
+                //Array de objetos
+                let personas = [];
+    
+                // Agregar objeto
+                let nuevaPersona = { nombre: "Juan", edad: 25 };
+                personas.push(nuevaPersona);  
+                let nuevaPersona2 = { nombre: "Ana", edad: 30 };
+                personas.push(nuevaPersona2);
+    
+                //Acceder a elementos del array de objetos. Persona en la posicion 2. Y mostrarlo.
+                let persona2 = personas[1];
+                document.getElementById("resultadoArrayObjetos").textContent = "Nombre" + persona2.nombre + " Edad: " + persona2.edad;
+    
+                //Imprimir array de objetos. Parecido a un array
+                document.getElementById("resultadoArrayObjetos").textContent = "Array completo: " + imprimir(personas);
+    
+                //Ordenar array de objetos de la A a la Z por un campo de texto.
+                personas.sort((a, b) => a.nombre.localeCompare(b.nombre));
+                document.getElementById("resultadoArrayObjetos").textContent = "Array ordenado por nombre: " + imprimir(personas);
+    
+                //Ordenar array de objetos de mayor a menor por un campo de numero.
+                personas.sort((a, b) => a.edad - b.edad);
+                document.getElementById("resultadoArrayObjetos").textContent = "Array ordenado por edad: " + imprimir(personas);
+    
+                
+            }
+    
+            function imprimir(personas) {
+                let texto = "";
+                //Recorrer array de objetos para mostrarlos (igual que un array se recorre y se usan los objetos como individuales)
+                for(i=0; i<personas.length; i++){
+                    let persona = personas[i];
+                    texto += "Nombre" + persona.nombre + " Edad: " + persona.edad;
+                }
+                return texto;
+            }
+        </code></pre>
         <button onclick="ejemploArrayObjetos()">Ver ejemplo</button>
         <p id="resultadoArrayObjetos"></p>
     </div>
 
     <script>
         function ejemploArrayObjetos() {
-            let personas = [{ nombre: "Ana", edad: 30 }];
-            personas.push({ nombre: "Juan", edad: 25 });  // Agregar objeto
-            document.getElementById("resultadoArrayObjetos").textContent = `Nombre: ${personas[0].nombre}, Edad: ${personas[0].edad}`;
+            //Array de objetos
+            let personas = [];
+
+            // Agregar objeto
+            let nuevaPersona = { nombre: "Juan", edad: 25 };
+            personas.push(nuevaPersona);
+            let nuevaPersona2 = { nombre: "Ana", edad: 30 };
+            personas.push(nuevaPersona2);
+
+            //Acceder a elementos del array de objetos. Persona en la posicion 2. Y mostrarlo.
+            let persona2 = personas[1];
+            document.getElementById("resultadoArrayObjetos").textContent = "Nombre" + persona2.nombre + " Edad: " + persona2.edad;
+
+            //Imprimir array de objetos. Parecido a un array
+            document.getElementById("resultadoArrayObjetos").textContent = "Array completo: " + imprimir(personas);
+
+            //Ordenar array de objetos de la A a la Z por un campo de texto.
+            personas.sort((a, b) => a.nombre.localeCompare(b.nombre));
+            document.getElementById("resultadoArrayObjetos").textContent = "Array ordenado por nombre: " + imprimir(personas);
+
+            //Ordenar array de objetos de mayor a menor por un campo de numero.
+            personas.sort((a, b) => a.edad - b.edad);
+            document.getElementById("resultadoArrayObjetos").textContent = "Array ordenado por edad: " + imprimir(personas);
+
+
+        }
+
+        function imprimir(personas) {
+            let texto = "";
+            //Recorrer array de objetos para mostrarlos (igual que un array se recorre y se usan los objetos como individuales)
+            for (i = 0; i < personas.length; i++) {
+                let persona = personas[i];
+                texto += "Nombre" + persona.nombre + " Edad: " + persona.edad;
+            }
+            return texto;
         }
     </script>
 

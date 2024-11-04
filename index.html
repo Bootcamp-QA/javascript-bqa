@@ -9,19 +9,15 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #ffffff;
-            /* verde agua */
             color: #004d40;
-            /* verde oscuro */
         }
 
         h2 {
             color: #00796b;
-            /* verde */
         }
 
         button {
             background-color: #0288d1;
-            /* azul */
             color: white;
             border: none;
             padding: 10px;
@@ -30,7 +26,6 @@
 
         button:hover {
             background-color: #004ba0;
-            /* azul más oscuro */
         }
 
         .hidden {
@@ -38,21 +33,65 @@
         }
 
         .box {
-
             padding: 10px;
             margin: 10px 0;
         }
 
         pre {
             background-color: #a4e7df;
-            /* verde */
             color: rgb(10, 10, 10);
+        }
+
+        /* Estilos para el menú */
+        nav {
+            background-color: #00796b;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            background-color: #004d40;
         }
     </style>
 </head>
 
 <body>
-    <h1>Tutorial Básico de JavaScript</h1>
+
+    <!-- Menú superior -->
+    <nav>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#variables">Variables</a></li>
+            <li><a href="#operaciones">Operaciones</a></li>
+            <li><a href="#cadenas">Cadenas</a></li>
+            <li><a href="#funciones">Funciones Basicas</a></li>
+            <li><a href="#dom">DOM</a></li>
+            <li><a href="#domformulario">DOM Formulario</a></li>
+            <li><a href="#condicionales">Condicionales</a></li>
+            <li><a href="#funcionesavanzadas">Funciones Avanzadas</a></li>
+            <li><a href="#arrays">Arrays</a></li>
+            <li><a href="#bucles">Bucles</a></li>
+        </ul>
+    </nav>
+    <h1 id="introduccion">Tutorial Básico de JavaScript</h1>
     <p>JavaScript es un lenguaje de programación orientado a objetos que se ejecuta en el navegador del cliente. Se
         utiliza principalmente para crear interactividad en sitios web, permitiendo a los desarrolladores implementar
         funcionalidades dinámicas y responder a eventos del usuario.</p>
@@ -92,7 +131,7 @@
 
     <!-- Sección: Variables -->
     <div class="box">
-        <h2>2. VARIABLES</h2>
+        <h2 id="variables">2. VARIABLES</h2>
         <a href="https://www.w3schools.com/js/js_variables.asp">Variables</a>
         <p>Las variables son contenedores para almacenar datos. Pueden definirse con <code>let</code>, o
             <code>const</code> si es un valor que no va a cambiar.
@@ -139,7 +178,7 @@
 
     <!-- Sección: Operaciones básicas -->
     <div class="box">
-        <h2>3. OPERACIONES</h2>
+        <h2 id="operaciones">3. OPERACIONES</h2>
         <a href="https://www.w3schools.com/js/js_operators.asp">Operaciones</a>
         <p>JavaScript permite realizar operaciones matemáticas como suma, resta, multiplicación y división.</p>
         <pre><code>let suma = 5 + 3;
@@ -167,7 +206,7 @@ let division = 6 / 3;</code></pre>
 
     <!-- Sección: Cadenas Básicas -->
     <div class="box">
-        <h2>4. CADENAS</h2>
+        <h2 id="cadenas">4. CADENAS</h2>
         <a href="https://www.w3schools.com/js/js_string_methods.asp">Cadenas</a>
         <p>Las cadenas (strings) son textos. Puedes concatenarlas con el operador <code>+</code>.</p>
         <pre><code>let saludo = "Hola " + "mundo";
@@ -215,7 +254,7 @@ let minusculas = saludo.toLowerCase();
 
     <!-- Sección: Funciones sin parámetros y evento onclick -->
     <div class="box">
-        <h2>5. FUNCIONES BASICAS. EVENTOS.</h2>
+        <h2 id="funciones">5. FUNCIONES BASICAS. EVENTOS.</h2>
         <a href="https://www.w3schools.com/js/js_functions.asp">Funciones</a>
         <a href="https://www.w3schools.com/js/js_events.asp">Eventos</a>
         <p>Las funciones son bloques de código que se ejecutan cuando se les llama. Puedes usar eventos como
@@ -241,7 +280,7 @@ let minusculas = saludo.toLowerCase();
 
     <!-- Sección: DOM Modificar Texto de un Elemento -->
     <div class="box">
-        <h2>5. DOM. MODIFICAR ELEMENTOS</h2>
+        <h2 id="dom">5. DOM. MODIFICAR ELEMENTOS</h2>
         <a href="https://www.w3schools.com/js/js_htmldom_document.asp">javascript Modificar Elementos del DOM</a>
         <p>El DOM (Document Object Model) permite acceder y modificar el contenido de los elementos HTML. Puedes cambiar
             el texto de un elemento utilizando la propiedad <code>textContent</code>.</p>
@@ -316,7 +355,7 @@ document.getElementById("miCaja").style.display = "none";
 
     <!-- Sección: DOM Obtener Valores de un Formulario -->
     <div class="box">
-        <h2>6. DOM Obtener Valores de un Formulario</h2>
+        <h2 id="domformulario">6. DOM Obtener Valores de un Formulario</h2>
         <a href="https://www.w3schools.com/jsref/dom_obj_text.asp">javascript DOM Input</a>
         <a href="https://www.w3schools.com/jsref/dom_obj_select.asp">javascript Select Input</a>
         <p>Para obtener valores de inputs o selects, puedes usar la propiedad <code>value</code> en JavaScript. A
@@ -373,7 +412,7 @@ document.getElementById("miCaja").style.display = "none";
 
     <!-- Sección: Condicionales -->
     <div class="box">
-        <h2>7. CONDICIONALES</h2>
+        <h2 id="condicionales">7. CONDICIONALES</h2>
         <a href="https://www.w3schools.com/js/js_if_else.asp">Condicionales</a>
         <p>Los condicionales permiten ejecutar código en función de condiciones. Usa <code>if</code>,
             <code>else if</code>, y <code>else</code>.
@@ -415,7 +454,7 @@ document.getElementById("miCaja").style.display = "none";
 
     <!-- Sección: Funciones con Parámetros y retorno -->
     <div class="box">
-        <h2>8. FUNCIONES AVANZADAS.</h2>
+        <h2 id="funcionesavanzadas">8. FUNCIONES AVANZADAS.</h2>
         <p>Las funciones pueden aceptar parámetros, es decir, valores que puedes pasarles, y devolver resultados. Es
             util para separar la logica del DOM</p>
         <pre><code>function sumar(a, b) {
@@ -453,7 +492,7 @@ function mostarResultado() {
 
     <!-- Sección: Arrays -->
     <div class="box">
-        <h2>9. ARRAYS</h2>
+        <h2 id="arrays">9. ARRAYS</h2>
         <p>Los arrays son listas de valores. Puedes agregar, eliminar y ordenar elementos en un array.</p>
         <a href="https://www.w3schools.com/js/js_array_methods.asp">Arrays</a>
         <pre><code>
@@ -504,7 +543,7 @@ function mostarResultado() {
     </script>
     <!-- Sección: Bucle For -->
     <div class="box">
-        <h2>Bucle For</h2>
+        <h2 id="bucles">Bucle For</h2>
         <p>Los bucles <code>for</code> permiten repetir acciones un número específico de veces.</p>
         <a href="https://www.w3schools.com/js/js_loop_for.asp">Bucle For</a>
         <pre><code>

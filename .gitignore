@@ -1,7 +1,6 @@
 
-Ejemplos/.DS_Store
-ejercicios/.DS_Store
-ejercicios/.DS_Store
-ejercicios/5_funciones_dom/.DS_Store
-ejercicios/.DS_Store
-ejercicios/.DS_Store
+# Ignorar todos los archivos en la carpeta ejemplos para no modificarlos
+ejemplos/*
+
+# Ignorar todos los archivos en la carpeta soluciones-ejercicios para no modificarlos
+soluciones-ejercicios/*

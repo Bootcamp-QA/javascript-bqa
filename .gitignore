@@ -1,6 +1,3 @@
-
-# Ignorar todos los archivos en la carpeta ejemplos para no modificarlos
-ejemplos/*
-
-# Ignorar todos los archivos en la carpeta soluciones-ejercicios para no modificarlos
-soluciones-ejercicios/*
+# Ignorar todos los archivos de ejemplos y soluciones para no modificarlos
+/soluciones-ejercicios
+/ejemplos

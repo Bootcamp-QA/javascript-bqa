@@ -1,25 +1,25 @@
-//Declarar funciones saludar y despedir
-function saludar () {
-    //obtener del html el parrafo con id parrafo. Cambiar su texto
-    document.getElementById("parrafo").textContent = "Hola Mundo";
+//Crear una funcion
+function saludar() {
+    //obtenemos el elemento que queremos modificar del html
+    document.getElementById("parrafo").textContent = "Hola Mundo"
+    
 }
 
 function despedir() {
-    //obtener del html el parrafo con id parrafo. Cambiar su texto
-    document.getElementById("parrafo").textContent = "Adios";
+    document.getElementById("parrafo").textContent = "Adios"
 }
 
 function cambiarColor() {
-    //obtener del html el parrafo con id parrafo. Cambiar su color a verde
-    document.getElementById("parrafo").style.color = "#0fbf64";
+    //obtenemos el elemento del que queremos cambiar el color por id. Podeis ponerle el color en ingles, o en numero hexadecimal
+    document.getElementById("parrafo").style.color = "red"
 }
 
-function ocultar () {
-    //obtener del html el parrafo con id parrafo. ocultarlo
-    document.getElementById("parrafo").style.display = "none";
+function ocultar() {
+    //obtenemos el elemento con id parrafo, y cambiamos display a none para ocultarlo
+    document.getElementById("parrafo").style.display = "none"
 }
 
-function mostrar () {
-     //obtener del html el parrafo con id parrafo. ocultarlo
-    document.getElementById("parrafo").style.display = "block";
+function mostrar() {
+    //obtenemos el elemento con id parrafo y cambiamos display a block para mostrarlo
+    document.getElementById("parrafo").style.display = "block"
 }

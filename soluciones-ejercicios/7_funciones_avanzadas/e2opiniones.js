@@ -11,9 +11,9 @@ function calcularOpinionValidar() {
 
 function calcularOpinion() {
     // Obtener los valores de las respuestas
-    const atencion = document.getElementById('atencion').valueAsNumber;
-    const calidad = document.getElementById('calidad').valueAsNumber;
-    const precio = document.getElementById('precio').valueAsNumber;
+    const atencion = parseInt(document.getElementById('atencion').value);
+    const calidad = parseInt(document.getElementById('calidad').value);
+    const precio = parseInt(document.getElementById('precio').value);
 
     // Realizar el cálculo
     const mediaPuntos = calcularMediaPuntos(atencion, calidad, precio);

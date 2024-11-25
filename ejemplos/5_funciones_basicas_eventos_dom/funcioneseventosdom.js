@@ -15,9 +15,11 @@ function cambiarColor() {
 }
 
 function ocultar () {
+    //obtener del html el parrafo con id parrafo. ocultarlo
     document.getElementById("parrafo").style.display = "none";
 }
 
 function mostrar () {
+     //obtener del html el parrafo con id parrafo. ocultarlo
     document.getElementById("parrafo").style.display = "block";
 }
